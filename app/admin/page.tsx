@@ -2,21 +2,41 @@
 
 import React from "react";
 import { Separator } from "@/components/ui/separator";
+import { DollarSign, ShoppingBag, User } from "lucide-react";
 
 
 export default async function Home() {
   return (
-    <div className="flex-col md:flex z-10">
-      <div className="flex-1 space-y-4 px-9 pb-2 z-10 lg:px-11 mb-5 pt-[2.7rem] flex-col relative">
-        <div className="flex items-center justify-between space-y-2 z-10">
-          <p className="lg:text-5xl md:text-4xl text-2xl font-bold light:text-slate-800 z-10">
-            Hello , nicolas
-          </p>
+    <div className="flex-col md:flex z-10 p-6">
+     <div className="flex flex-wrap gap-4 items-center justify-center w-[90%] h-auto max-w-[800px]">
+     <div className="flex justify-between items-center h-[100px] border w-[250px] rounded-xl">
+       <div className="w-[20%] h-full bg-primary flex justify-center items-center">
+       <DollarSign color="white"/>
+       </div>
+        <div className="w-[80%] px-4">
+          <p className="font-bold text-xl">Total earns</p>
+          <p>$100</p>
         </div>
       </div>
-      <div className="px-9 mt-6 grid lg:grid-cols-2">
-        <Separator />
+      <div className="flex justify-between items-center h-[100px] border w-[250px] rounded-xl">
+       <div className="w-[20%] h-full bg-primary flex justify-center items-center" >
+       <User color="white"/>
+       </div>
+        <div className="w-[80%] px-4">
+          <p className="font-bold text-xl">Total Users</p>
+          <p>200</p>
+        </div>
       </div>
+      <div className="flex justify-between items-center h-[100px] border w-[250px] rounded-xl">
+       <div className="w-[20%] h-full bg-primary flex justify-center items-center" >
+       <ShoppingBag color="white"/>
+       </div>
+        <div className="w-[80%] px-4">
+          <p className="font-bold text-xl">Total sells</p>
+          <p>$20.89</p>
+        </div>
+      </div>
+     </div>
     </div>
   );
 }

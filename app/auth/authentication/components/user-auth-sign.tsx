@@ -65,7 +65,7 @@ export function UserAuthSign({ className, ...props }: UserAuthFormProps) {
             />
             
           </div>
-          <Button disabled={isLoading} className="text-white">Sign up</Button>
+          <Button disabled={isLoading} className="text-white">Sign in</Button>
         </div>
       </form>
     </div>

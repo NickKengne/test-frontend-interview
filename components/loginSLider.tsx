@@ -5,7 +5,7 @@ import { ImagesSlider } from "@/components/slider";
 
 export function ImagesSliderDemo() {
   const images = [
-    "https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg?auto=compress&cs=tinysrgb&w=600"
+    "https://images.unsplash.com/photo-1719837593366-d90c06c82957?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8"
   ];
   return (
     <ImagesSlider className="min-h-screen" images={images}>

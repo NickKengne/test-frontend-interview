@@ -17,8 +17,8 @@ const SideBar = ({}: PropsWithChildren) => {
 
   return (
     <div className="min-h-16 w-full bg-background">
-        <div className={clsx(isCollapsed ? "absolute -top-10 -right-10 flex justify-center items-center h-7 w-7 rounded-full bg-black" : "absolute -top-10 -right-10 flex justify-center items-center h-7 w-7 rounded-full bg-black")} onClick={toggleSideBar}>
-            <Menu color="white" size={12} className=""/>
+        <div className={clsx(isCollapsed ? "absolute -top-10 -right-10 flex justify-center items-center h-7 w-7 rounded-full" : "absolute -top-10 -right-10 flex justify-center items-center h-7 w-7 rounded-full ")} onClick={toggleSideBar}>
+            <Menu color="black" size={20} className=""/>
         </div>
         
       <Nav

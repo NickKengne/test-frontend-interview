@@ -7,6 +7,8 @@ import { Input } from "@/components/ui/input";
 import { useRouter } from "next/navigation";
 // import { Facebook } from "lucide-react";
 import { toast } from "sonner";
+import { setCookie } from "cookies-next";
+import { User } from "@/app/admin/layout";
 
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {}
 type Credentials = {
@@ -25,6 +27,21 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
     password: password,
   };
 
+  const userData : User= {
+    id:"1",
+    firstname:"nicolas",
+    lastname:"dibrilain",
+    gender:"male",
+    phone:"+237691578689"
+  }
+
+
+  const handleCookies = () => {
+    setCookie("token", "2132179fasjakdfb21hevi77e092");
+    setCookie("user", JSON.stringify(userData))
+    router.push("/admin")
+  }
+
 
   function checkCredentialAreEmpty (data: Credentials) {
     if (data.email === "" || data.password === "") {
@@ -42,6 +59,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
       setIsLoading(false);
       return;
     }
+    handleCookies()
     //console.log(data);
   }
 
